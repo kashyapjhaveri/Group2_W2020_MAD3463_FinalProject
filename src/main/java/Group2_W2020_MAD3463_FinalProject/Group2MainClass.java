@@ -22,14 +22,45 @@ public class Group2MainClass {
                System.out.println("0.Exit");
                System.out.println("==========================");
                choice=input.nextInt();
-               if (int nextChoice=0){
-                   System.out.println("Enter Your Choice:--");
+
+               switch(choice)
+               {
+                   case 1: {
+                       int nextChoice = 0;
+                       System.out.println("Enter Your Choice:--");
+                       do {
+                           System.out.println("++++++++++++++++++++++++");
+                           nextChoice = input.nextInt();
+                           switch (choice) {
+                               case 1: {
+
+                               }
+                               case 2: {
+
+                               }
+                               case 3: {
+
+                               }
+                               case 0: {
+                                   break;
+                               }
+                           }
+
+                       }
+                       while (nextChoice != 0);
+                   }
+                   case 0:
+                   {
+                       input.close();
+                       break;
+                   }
                }
-               else
 
 
-               
+
+
            }
+
        }
 
     }
