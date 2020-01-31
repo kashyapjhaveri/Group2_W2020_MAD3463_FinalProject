@@ -2,7 +2,7 @@ package Group2_W2020_MAD3463_FinalProject;
 
 import java.time.LocalDate;
 
-abstract public class Person
+abstract public class Person implements IDisplay
 {
     private Integer id;
     private String firstName,lastName;
