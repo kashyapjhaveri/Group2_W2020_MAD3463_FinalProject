@@ -33,6 +33,10 @@ abstract public class Person implements IDisplay
         calculateAge();
     }
 
+    public Person() {
+
+    }
+
     private void calculateAge() {
     }
 }

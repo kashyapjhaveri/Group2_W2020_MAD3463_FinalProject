@@ -8,6 +8,7 @@ public class Driver extends Person
 
     public Driver()
     {
+        super();
     }
     public String getDrivingLicenceNumber()
     {

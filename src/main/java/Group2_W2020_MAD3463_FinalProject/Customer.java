@@ -20,7 +20,7 @@ public class Customer extends Person
     @Override
     public void print()
     {
-        System.out.println(getId()+""+getFirstName()+""+getLastName()+""+getBirthDate()""+getMobileNumber()+""+getEmail()+""+getUserName()+""+getPassword()+""+this.houseNumber+""+this.streetName+""+this.city+""+this.province);
+       // System.out.println(getId()+""+getFirstName()+""+getLastName()+""+getBirthDate()""+getMobileNumber()+""+getEmail()+""+getUserName()+""+getPassword()+""+this.houseNumber+""+this.streetName+""+this.city+""+this.province);
     }
 
 
