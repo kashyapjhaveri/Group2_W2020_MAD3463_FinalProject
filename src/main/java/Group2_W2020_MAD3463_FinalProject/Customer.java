@@ -17,9 +17,15 @@ public class Customer extends Person
         this.city = city;
         this.province = province;
     }
-
-
+    @Override
+    public void print()
+    {
+        System.out.println(getId()+""+getFirstName()+""+getLastName()+""+getBirthDate()""+getMobileNumber()+""+getEmail()+""+getUserName()+""+getPassword()+""+this.houseNumber+""+this.streetName+""+this.city+""+this.province);
     }
+
+
+
+}
 
 
 

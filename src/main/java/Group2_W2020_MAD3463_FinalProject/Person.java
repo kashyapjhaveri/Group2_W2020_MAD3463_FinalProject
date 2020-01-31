@@ -16,7 +16,7 @@ abstract public class Person implements IDisplay
 
     final private Byte key=5;
 
-    public Person() {
+    public Person(Integer id, String firstName, String lastName, Gender gender, LocalDate birthDate, String mobileNumber, String email, String userName, String password) {
     }
 
     public Person(Integer id, String firstName, String lastName, Gender gender, LocalDate birthDate, Integer age, String mobileNumber, String email, String userName, String password) {
