@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="Group2_W2020_MAD3463_FinalProject.main" target="1.8" />
+      <module name="Group2_W2020_MAD3463_FinalProject.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
