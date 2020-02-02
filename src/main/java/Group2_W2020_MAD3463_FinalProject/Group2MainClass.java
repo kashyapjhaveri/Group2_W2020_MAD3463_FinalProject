@@ -3,12 +3,22 @@ package Group2_W2020_MAD3463_FinalProject;
 
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Group2MainClass {
-    public static void main(String[] args) {
-        System.out.println("Enter Your Choice:--");
+    public static HashMap<String,Customer> customers=new HashMap<>();
+    public static HashMap<String,Owner>owners = new HashMap<>();
+    public static HashMap<String,Driver>drivers=new HashMap<>();
+    public static HashMap<String,Bus>busses=new HashMap<>();
+
+    public static DateTimeFormatter dateFormat=DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+
+   //public static void main(String[] args) {
+        /*System.out.println("Enter Your Choice:--");
         try {
             Scanner input = new Scanner(System.in);
             int choice = 0;
@@ -79,7 +89,7 @@ public class Group2MainClass {
         }
         catch (Exception e){
             System.out.println(e.toString());
-        }
+        }*/
     }
 }
 
