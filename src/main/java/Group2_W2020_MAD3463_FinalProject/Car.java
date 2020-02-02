@@ -19,4 +19,8 @@ public class Car extends  Vehical {
     public void setColor(String color) {
         this.color = color;
     }
+    @Override
+    public void print() {
+
+    }
 }
