@@ -9,6 +9,7 @@ public class VehicleRent implements IDisplay
     private Integer noOfDays;
     private Integer noOfKmDriven;
     private Float totalBill;
+    /*private vehicle vehicleRented;*/
 
 
     public LocalDate getStartDate() {
