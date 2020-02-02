@@ -4,4 +4,35 @@ public class Bus extends  Vehical{
     private Boolean isAccessibilityAvailable;
     private Boolean isWifiAvailable;
 
-   
+    public String getTypeOfBus() {
+        return typeOfBus;
+    }
+
+    public void setTypeOfBus(String typeOfBus) {
+        this.typeOfBus = typeOfBus;
+
+    }
+    public Boolean getAccessibilityAvailable() {
+        return isAccessibilityAvailable;
+    }
+
+    public void setAccessibilityAvailable(Boolean accessibilityAvailable) {
+        isAccessibilityAvailable = accessibilityAvailable;
+    }
+    public Boolean getWifiAvailable() {
+        return isWifiAvailable;
+    }
+
+    public void setWifiAvailable(Boolean wifiAvailable) {
+        isWifiAvailable = wifiAvailable;
+    }
+
+    @Override
+    public void print() {
+
+    }
+}
+
+
+
+
