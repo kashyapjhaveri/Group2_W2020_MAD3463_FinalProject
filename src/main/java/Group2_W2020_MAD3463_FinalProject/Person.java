@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 abstract public class Person implements IDisplay
 {
-    private Integer id;
+    private String id;
     private String firstName,lastName;
     private Gender gender;
     private LocalDate birthDate;
@@ -34,14 +34,32 @@ abstract public class Person implements IDisplay
         this.password = (password);
         calculateAge();
     }
-
-    public Integer getId() {
-        return id;
+    private void calculateAge()
+    {
+        this.age=LocalDate.now().getYear()-this.birthDate.getYear();
     }
 
-    public void setId(Integer id) {
+
+    private String encryptPassword(String originalPassword)
+    {
+       char orinalPasswordArray[]=originalPassword.toCharArray();
+       for(int i=0;i< originalPassword.length();i++)
+       {
+           int temp= orinalPasswordArray[i];
+           temp+=key;
+           orinalPasswordArray[i]=(char)temp;
+       }
+       return new String(orinalPasswordArray);
+    }
+
+
+    public String getId(){ return id;}
+
+
+
+    /*public void setId(String id) {
         this.id = id;
-    }
+    }*/
 
     public String getFirstName() {
         return firstName;
@@ -117,11 +135,6 @@ abstract public class Person implements IDisplay
 
     public Byte getKey() {
         return key;
-    }
-
-    private void calculateAge() {
-
-
     }
 
 }
