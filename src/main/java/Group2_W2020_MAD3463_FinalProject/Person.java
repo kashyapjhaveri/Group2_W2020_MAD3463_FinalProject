@@ -52,6 +52,19 @@ abstract public class Person implements IDisplay
        return new String(orinalPasswordArray);
     }
 
+    private String decryptPassword(String originalPassword)
+    {
+        char orinalPasswordArray[]=originalPassword.toCharArray();
+        for(int i=0;i< originalPassword.length();i++)
+        {
+            int temp= orinalPasswordArray[i];
+            temp-=key;
+            orinalPasswordArray[i]=(char)temp;
+        }
+        return new String(orinalPasswordArray);
+    }
+
+
 
     public String getId(){ return id;}
 
