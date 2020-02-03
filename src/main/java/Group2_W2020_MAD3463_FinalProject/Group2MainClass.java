@@ -2,6 +2,14 @@ package Group2_W2020_MAD3463_FinalProject;
 
 import Group2_W2020_MAD3463_FinalProject.Enum.Fuel;
 import Group2_W2020_MAD3463_FinalProject.Enum.Gender;
+import Group2_W2020_MAD3463_FinalProject.Customer;
+import Group2_W2020_MAD3463_FinalProject.Owner;
+import Group2_W2020_MAD3463_FinalProject.Driver;
+import Group2_W2020_MAD3463_FinalProject.Bus;
+import Group2_W2020_MAD3463_FinalProject.Car;
+import Group2_W2020_MAD3463_FinalProject.MotorCycle;
+import Group2_W2020_MAD3463_FinalProject.Vehicle;
+
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -28,7 +36,7 @@ public class Group2MainClass {
             File file = new File(".customers.csv");
             FileReader reader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(reader);
-            while ((line = BufferedReader.) != null) {
+            while ((line = BufferedReader.readLine()) != null) {
                 String Content[] = line.split(",");
                 LocalDate tempDate = LocalDate.parse(Content[4], dateFormat);
 
