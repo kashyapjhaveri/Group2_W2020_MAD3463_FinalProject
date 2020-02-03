@@ -9,6 +9,7 @@ import java.io.FileReader;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class Group2MainClass {
     public static HashMap<String, Customer> customers = new HashMap<>();
@@ -357,7 +358,39 @@ public class Group2MainClass {
             }
         }
     }
+    public static void main(String[] args) {
+        int choice=0;
+        Scanner input=  new Scanner(System.in);
 
+        readCustomersToHashMap();
+        readOwnersToHashMap();
+        readDriversToHashMap();
+
+        readBusesToHashMap();
+        readCarsToHashMap();
+        readMotorCyclesToHashMap();
+
+        readOwnerVehicles();
+
+        System.out.println("+++++++++++++++++");
+        System.out.println("1.List All Person");
+        System.out.println("2.List All Vehicles");
+        System.out.println("2.List all owner vehicles");
+        System.out.println("+++++++++++++++++");
+        System.out.println("Enter choice:- ");
+        choice=input.nextInt();
+
+        switch (choice)
+        {
+            case 1:
+            {
+                int nextChoice=0;
+                System.out.println("1.Customers" );
+                System.out.println("2.Owners" );
+                System.out.println("2.Drivers" );
+                System.out.println("Enter choice:- ");
+
+                nextChoice=input.nextInt();
 
 }
 
