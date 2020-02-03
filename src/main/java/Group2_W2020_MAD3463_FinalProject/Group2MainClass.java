@@ -265,7 +265,7 @@ public class Group2MainClass {
         }
     }
 
-    public static void listAllVehicals(String type)
+    public static void listAllVehicles(String type)
     {
         switch (type)
         {
@@ -283,7 +283,7 @@ public class Group2MainClass {
             }
             case "bus":
             {
-                for (Bus bus:buses.values())
+                for (Bus bus:busses.values())
                 {
                     System.out.println("=========================================");
                     bus.print();
@@ -348,7 +348,7 @@ public class Group2MainClass {
             {
                 System.out.println("==================");
                 System.out.println("OwnerName:- "+owner.getFirstName()+" "+owner.getLastName());
-                for (Vehical vehical:owner.getListOfVehcialOwned().values())
+                for (Vehicle vehical:owner.getListOfVehcialOwned().values())
                 {
                     if (vehical instanceof Car)
                     {
@@ -441,17 +441,17 @@ public class Group2MainClass {
                 {
                     case 1:
                     {
-                        listAllVehicle("car");
+                        listAllVehicles("car");
                         break;
                     }
                     case 2:
                     {
-                        listAllVehicals("bus");
+                        listAllVehicles("bus");
                         break;
                     }
                     case 3:
                     {
-                        listAllVehicals("motorcycle");
+                        listAllVehicles("motorcycle");
                         break;
                     }
                 }
