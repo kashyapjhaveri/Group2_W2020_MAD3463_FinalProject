@@ -187,6 +187,7 @@ public class Group2MainClass {
         }
     }
 
+
     public static void readOwnerVehicles()
     {
         String line="";
@@ -224,11 +225,47 @@ public class Group2MainClass {
         {
             System.out.println(e);
         }
+    }
 
+    public static void readMotorCyclesToHashMap()
+    {
+        String line="";
+        try{
+            File file = new File(".\\InputFiles\\MotorCycles.csv");
+            FileReader reader = new FileReader(file);
+            BufferedReader bufferedReader=new BufferedReader(reader);
+            while ((line=bufferedReader.readLine())!=null)
+            {
+                String content[]=line.split(",");
+                Driver tempDriver = null;
+
+                for (int j=0;j<content.length;j++)
+                {
+                    Fuel tempFuel = null;
+
+                    if (content[8].equalsIgnoreCase("Petrol"))
+                        tempFuel=Fuel.petrol;
+                    else if (content[8].equalsIgnoreCase("Diesel"))
+                        tempFuel=Fuel.diesel;
+
+                    if (content[3].equalsIgnoreCase("false"))
+                    {
+                        tempDriver=drivers.get(content[4]);
+                    }
+
+                    MotorCycle tempObj = new MotorCycle(content[0],content[1],content[2],Boolean.parseBoolean(content[3]),tempDriver,Boolean.parseBoolean(content[5]),content[6],Byte.parseByte(content[7]),tempFuel,Integer.parseInt(content[9]),Integer.parseInt(content[10]),Integer.parseInt(content[11]),Float.parseFloat(content[12]));
+                    motorcycles.put(content[0],tempObj);
+                }
             }
-
-
         }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
+    }
+
+
+
     public static void listAllPersons(String type)
     {
         switch (type)
