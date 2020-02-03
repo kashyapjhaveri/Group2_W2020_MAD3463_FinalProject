@@ -9,7 +9,9 @@ import Group2_W2020_MAD3463_FinalProject.Bus;
 import Group2_W2020_MAD3463_FinalProject.Car;
 import Group2_W2020_MAD3463_FinalProject.MotorCycle;
 import Group2_W2020_MAD3463_FinalProject.Vehicle;
+import com.sun.tools.doclets.internal.toolkit.Content;
 import com.sun.tools.javah.Gen;
+import jdk.nashorn.internal.runtime.ConsString;
 
 import javax.swing.text.AbstractDocument;
 import javax.swing.text.StringContent;
@@ -17,6 +19,7 @@ import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.nio.Buffer;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
@@ -40,7 +43,8 @@ public class Group2MainClass {
             File file = new File(".customers.csv");
             FileReader reader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(reader);
-            while ((line = BufferedReader.readLine()) != null) {
+            while ((line = BufferedReader.readLine()) != null)
+            {
                 String Content[] = line.split(",");
                 LocalDate tempDate = LocalDate.parse(Content[4], dateFormat);
 
@@ -48,7 +52,7 @@ public class Group2MainClass {
                     Gender tempFuel;
                     if (Content[3] == "Male")
                         tempFuel = Gender.Male;
-                    else if (Content[3] = "Female")
+                    else if (Content[3] == "Female")
                         tempFuel = Gender.Female;
                     else
                         tempFuel = Gender.other;
@@ -63,7 +67,41 @@ public class Group2MainClass {
         }
 
     }
-    
+    public static void readDriversToHashMap()
+    {
+        String line="";
+        try{
+            File file=new File(".Drivers.csv");
+            FileReader reader=new FileReader(file);
+            BufferedReader bufferReader=new BufferedReader(reader);
+            while
+            ((line=bufferReader.readLine())!=null)
+            {
+                String content[]=line.split(",");
+                LocalDate tempDate=LocalDate.parse(content[4],dateFormat);
+
+                for(int j=0;j<content.length;j++)
+                {
+                    Gender tempFuel;
+                    if (Content[3] == "Male")
+                        tempFuel = Gender.Male;
+                    else if (Content[3] == "Female")
+                        tempFuel = Gender.Female;
+                    else
+                        tempFuel = Gender.other;
+                    Driver temp=new
+                    Driver(content[0],content[1],content[2],tempFuel,tempDate,content[5],content[6],content[7],content[8],content[9],Boolean.parseBoolean(content[10]),Double.parseDouble(content[11]));
+                    drivers.put(content[0],temp);
+                }
+            }
+
+        }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
+    }
+
 
 
 
