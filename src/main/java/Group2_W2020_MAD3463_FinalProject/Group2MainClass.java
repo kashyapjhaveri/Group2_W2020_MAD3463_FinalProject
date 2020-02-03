@@ -161,3 +161,38 @@ public class Group2MainClass {
         }
     }
     public static void listAllPersons(String type)
+    {
+        switch (type)
+        {
+            case "owner":
+            {
+                for (Owner owner:owners.values())
+                {
+                    System.out.println("===============");
+                    owner.print();
+                    System.out.println("===============");
+                }
+                break;
+            }
+            case "customer":
+            {
+                for (Customer customer:customers.values())
+                {
+                    System.out.println("===============");
+                    customer.print();
+                    System.out.println("===============");
+                }
+                break;
+            }
+            case "driver":
+            {
+                for (Driver driver:drivers.values())
+                {
+                    System.out.println("===============");
+                    driver.print();
+                    System.out.println("===============");
+                }
+                break;
+            }
+        }
+    }
