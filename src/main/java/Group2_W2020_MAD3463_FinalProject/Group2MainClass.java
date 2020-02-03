@@ -62,9 +62,9 @@ public class Group2MainClass {
                 for (int j = 0; j < content.length; j++) {
                     Gender tempFuel;
                     if (content[3] == "Male")
-                        tempFuel = Gender.male;
+                        tempFuel = Gender.Male;
                     else if (content[3] == "Female")
-                        tempFuel = Gender.female;
+                        tempFuel = Gender.Female;
                     else
                         tempFuel = Gender.other;
                     Owner temp = new Owner(content[0], content[1], content[2], tempFuel, tempDate, content[5], content[6], content[7], content[8], content[9], content[10], content[11]);
@@ -168,9 +168,9 @@ public class Group2MainClass {
                     Fuel tempFuel = null;
 
                     if (content[8].equalsIgnoreCase("Petrol"))
-                        tempFuel=Fuel.petrol;
+                        tempFuel=Fuel.Petrol;
                     else if (content[8].equalsIgnoreCase("Diesel"))
-                        tempFuel=Fuel.diesel;
+                        tempFuel=Fuel.Diesel;
 
                     if (content[3].equalsIgnoreCase("false"))
                     {
@@ -178,7 +178,7 @@ public class Group2MainClass {
                     }
 
                     Bus tempObj = new Bus(content[0],content[1],content[2],Boolean.parseBoolean(content[3]),tempDriver,Boolean.parseBoolean(content[5]),content[6],Byte.parseByte(content[7]),tempFuel,Integer.parseInt(content[9]),Integer.parseInt(content[10]),content[11],Boolean.parseBoolean(content[12]),Boolean.parseBoolean(content[13]));
-                    buses.put(content[0],tempObj);
+                    busses.put(content[0],tempObj);
                 }
             }
         }
@@ -245,9 +245,9 @@ public class Group2MainClass {
                     Fuel tempFuel = null;
 
                     if (content[8].equalsIgnoreCase("Petrol"))
-                        tempFuel=Fuel.petrol;
+                        tempFuel=Fuel.Petrol;
                     else if (content[8].equalsIgnoreCase("Diesel"))
-                        tempFuel=Fuel.diesel;
+                        tempFuel=Fuel.Diesel;
 
                     if (content[3].equalsIgnoreCase("false"))
                     {
@@ -377,8 +377,8 @@ public class Group2MainClass {
         int choice=0;
         Scanner input=  new Scanner(System.in);
 
-        readCustomersToHashMap();
-        readOwnersToHashMap();
+        readCustomersToHashmap();
+        readOwnersToHashmap();
         readDriversToHashMap();
 
         readBusesToHashMap();
