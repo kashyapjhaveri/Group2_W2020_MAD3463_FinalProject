@@ -33,7 +33,7 @@ public class MotorCycle extends Vehicle
 
     @Override
     public void print() {
-        /*System.out.println(getVehicalIndentificationNumber()+" "+getVechicalDiscription()+" "+getManufacturerName()+" "+getSelfDrive()+" "+getInsured()+" "+getInsuranceProviderName()+" "+getNoOfSeat()+" "+getFuelType()+" "+getBaseRate()+" "+getRatePerKm()+" "+getMaxTopSpeed()+" "+getMaxTopSpeed());*/
+        System.out.println(getVehicleIdentificationNumber()+" "+getVehicleDescription()+" "+getManufacturerName()+" "+getSelfDrive()+" "+getInsured()+" "+getInsuranceProviderName()+" "+getNoOfSeat()+" "+getFuelType()+" "+getBaseRate()+" "+getRatePerKm()+" "+getMaxTopSpeed()+" "+getMaxTopSpeed());
         System.out.println("VIn :-" + getVehicleIdentificationNumber());
         System.out.println("Description :-" + getVehicleDescription());
         System.out.println("Manufacturer :-" + getManufacturerName());
