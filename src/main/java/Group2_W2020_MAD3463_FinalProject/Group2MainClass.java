@@ -123,3 +123,40 @@ public class Group2MainClass {
         }
     }
     public static void readVehicleRented()
+    {
+        String line="";
+        try{
+            File file = new File(".\\InputFiles\\vehicleRent.csv");
+            FileReader reader = new FileReader(file);
+            BufferedReader bufferedReader=new BufferedReader(reader);
+            while ((line=bufferedReader.readLine())!=null)
+            {
+                String content[]=line.split(",");
+                Vehical tempVehicle=null;
+                Customer tempCustomer = customers.get(content[0]);
+                LocalDate tempStartDate = LocalDate.parse(content[1],dateFormate);
+                LocalDate tempEndDate = LocalDate.parse(content[2],dateFormate);
+
+                if (cars.get(content[4])!=null)
+                {
+                    tempVehicle=cars.get(content[4]);
+                }
+                else if(buses.get(content[4])!=null)
+                {
+                    tempVehicle=buses.get(content[4]);
+                }
+                else if(motorcycles.get(content[4])!=null)
+                {
+                    tempVehicle=motorcycles.get(content[4]);
+                }
+
+                VehicalRent tempObj = new VehicalRent(tempCustomer,tempStartDate,tempEndDate,Integer.parseInt(content[3]),Integer.parseInt(content[5]),tempVehicle);
+                vehiclesRented.put(content[3],tempObj);
+            }
+            bufferedReader.close();
+        }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
+    }
