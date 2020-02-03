@@ -324,6 +324,40 @@ public class Group2MainClass {
             }
         }
     }
+    public static void listOwnerAllVehicals()
+    {
+        for (Owner owner:owners.values())
+        {
+            if (owner.getListOfVehcialOwned()!=null)
+            {
+                System.out.println("==================");
+                System.out.println("OwnerName:- "+owner.getFirstName()+" "+owner.getLastName());
+                for (Vehical vehical:owner.getListOfVehcialOwned().values())
+                {
+                    if (vehical instanceof Car)
+                    {
+                        System.out.println("+++++++++++++++++++++++");
+                        ((Car)vehical).print();
+                        System.out.println("+++++++++++++++++++++++");
+                    }
+                    else if (vehical instanceof Bus)
+                    {
+                        System.out.println("+++++++++++++++++++++++");
+                        ((Bus)vehical).print();
+                        System.out.println("+++++++++++++++++++++++");
+                    }
+                    else if (vehical instanceof MotorCycle)
+                    {
+                        System.out.println("+++++++++++++++++++++++");
+                        ((MotorCycle)vehical).print();
+                        System.out.println("+++++++++++++++++++++++");
+                    }
+                }
+                System.out.println("==================");
+            }
+        }
+    }
+
 
 }
 
