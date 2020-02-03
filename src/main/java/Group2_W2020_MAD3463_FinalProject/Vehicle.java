@@ -57,7 +57,7 @@ abstract public class Vehicle implements IDisplay
         this.manufacturerName = manufacturerName;
     }
 
-    public boolean isSelfDrive() {
+    public boolean getSelfDrive() {
         return isSelfDrive;
     }
 
@@ -73,7 +73,7 @@ abstract public class Vehicle implements IDisplay
         this.driver = driver;
     }
 
-    public boolean isInsured() {
+    public boolean getInsured() {
         return isInsured;
     }
 

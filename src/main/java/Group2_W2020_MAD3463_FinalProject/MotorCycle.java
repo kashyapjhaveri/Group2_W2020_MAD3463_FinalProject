@@ -47,12 +47,4 @@ public class MotorCycle extends Vehicle
         System.out.println("Milege:-" + getMilage());
     }
 
-    private void getSelfDrive()
-    {
-    }
-
-
-    public void getInsured() {
-
-    }
 }

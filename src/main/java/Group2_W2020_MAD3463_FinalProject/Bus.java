@@ -21,7 +21,7 @@ public class Bus extends Vehicle
         this.typeOfBus = typeOfBus;
     }
 
-    public boolean isAccessibilityAvailable() {
+    public boolean getAccessibilityAvailable() {
         return isAccessibilityAvailable;
     }
 
@@ -29,7 +29,7 @@ public class Bus extends Vehicle
         isAccessibilityAvailable = accessibilityAvailable;
     }
 
-    public boolean isWifiAvailable() {
+    public boolean getWifiAvailable() {
         return isWifiAvailable;
     }
 
@@ -53,7 +53,7 @@ public class Bus extends Vehicle
         System.out.println("RatePerKm:- "+getRatePerKm());
         System.out.println("VehicleType:- "+getVehicleType());
         System.out.println("TypeOfBus:- "+getTypeOfBus());
-        System.out.println("isAccessibilityAvailable:- "+get());
+        System.out.println("isAccessibilityAvailable:- "+getAccessibilityAvailable());
         System.out.println("isWifiAvailable:- "+getWifiAvailable());
 
     }
