@@ -122,3 +122,4 @@ public class Group2MainClass {
             System.out.println(e);
         }
     }
+    public static void readVehicleRented()
