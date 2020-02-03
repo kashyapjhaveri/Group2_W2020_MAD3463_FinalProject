@@ -197,3 +197,117 @@ public class Group2MainClass {
         }
     }
     public static void listVehicalRented()
+    {
+        for (VehicalRent vehicalRent:vehiclesRented.values())
+        {
+            System.out.println("====================");
+            System.out.println("CustormerName: -"+vehicalRent.getCustomer().getFirstName()+" "+vehicalRent.getCustomer().getLastName());
+            vehicalRent.print();
+            System.out.println("VehicleManufacturer:- "+vehicalRent.getVehicalRented().getManufacturerName());
+            System.out.println("====================");
+        }
+    }
+
+    public static void main(String[] args) {
+        int choice=0;
+        Scanner input=  new Scanner(System.in);
+
+        readCustomersToHashMap();
+        readOwnersToHashMap();
+        readDriversToHashMap();
+
+        readBusesToHashMap();
+        readCarsToHashMap();
+        readMotorCyclesToHashMap();
+
+        readOwnerVehicles();
+        readVehicleRented();
+
+        do {
+            System.out.println("+++++++++++++++++");
+            System.out.println("1.List All Person");
+            System.out.println("2.List All Vehicles");
+            System.out.println("3.List all owner vehicles");
+            System.out.println("4.List all vehicles rented by customers");
+            System.out.println("0.Exit");
+            System.out.println("+++++++++++++++++");
+            System.out.println("Enter choice:- ");
+            choice=input.nextInt();
+
+            switch (choice)
+            {
+                case 1:
+                {
+                    int nextChoice=0;
+                    System.out.println("1.Customers" );
+                    System.out.println("2.Owners" );
+                    System.out.println("3.Drivers" );
+                    System.out.println("Enter choice:- ");
+
+                    nextChoice=input.nextInt();
+
+                    switch (nextChoice)
+                    {
+                        case 1:
+                        {
+                            listAllPersons("customer");
+                            break;
+                        }
+                        case 2:
+                        {
+                            listAllPersons("owner");
+                            break;
+                        }
+                        case 3:
+                        {
+                            listAllPersons("driver");
+                            break;
+                        }
+                    }
+
+                    break;
+                }
+                case 2:
+                {
+                    int nextChoice=0;
+
+                    System.out.println("1.Cars");
+                    System.out.println("2.Buses");
+                    System.out.println("3.MotorCycle");
+                    System.out.println("Enter your choice:- ");
+                    nextChoice=input.nextInt();
+
+                    switch (nextChoice)
+                    {
+                        case 1:
+                        {
+                            listAllVehicals("car");
+                            break;
+                        }
+                        case 2:
+                        {
+                            listAllVehicals("bus");
+                            break;
+                        }
+                        case 3:
+                        {
+                            listAllVehicals("motorcycle");
+                            break;
+                        }
+                    }
+                }
+                case 3:
+                {
+                    listOwnerAllVehicals();
+                    break;
+                }
+                case 4:
+                {
+                    listVehicalRented();
+                    break;
+                }
+            }
+        }
+        while (choice!=0);
+    }
+}
