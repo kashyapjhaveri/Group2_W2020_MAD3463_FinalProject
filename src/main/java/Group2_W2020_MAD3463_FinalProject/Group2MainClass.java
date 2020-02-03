@@ -391,6 +391,26 @@ public class Group2MainClass {
                 System.out.println("Enter choice:- ");
 
                 nextChoice=input.nextInt();
+                switch (nextChoice)
+                {
+                    case 1:
+                    {
+                        listAllPersons("customers");
+                        break;
+                    }
+                    case 2:
+                    {
+                        listAllPersons("owners");
+                        break;
+                    }
+                    case 3:
+                    {
+                        listAllPersons("drivers");
+                        break;
+                    }
+                }
+
+                break;
 
 }
 
