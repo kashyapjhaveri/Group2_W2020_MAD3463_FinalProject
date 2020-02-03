@@ -265,6 +265,50 @@ public class Group2MainClass {
         }
     }
 
+    public static void listAllVehicals(String type)
+    {
+        switch (type)
+        {
+            case "car":
+            {
+                for (Car car:cars.values())
+                {
+                    System.out.println("=========================================");
+                    car.print();
+                    if (car.getDriver()!=null)
+                        System.out.println("DriverName:- "+car.getDriver().getFirstName()+" "+car.getDriver().getLastName());
+                    System.out.println("=========================================");
+                }
+                break;
+            }
+            case "bus":
+            {
+                for (Bus bus:buses.values())
+                {
+                    System.out.println("=========================================");
+                    bus.print();
+                    if (bus.getDriver()!=null)
+                        System.out.println("DriverName:- "+bus.getDriver().getFirstName()+" "+bus.getDriver().getLastName());
+                    System.out.println("=========================================");
+                }
+                break;
+            }
+            case "motorcycle":
+            {
+                for (MotorCycle motorCycle:motorcycles.values())
+                {
+                    System.out.println("=========================================");
+                    motorCycle.print();
+                    if (motorCycle.getDriver()!=null)
+                        System.out.println("DriverName:- "+motorCycle.getDriver().getFirstName()+" "+motorCycle.getDriver().getLastName());
+                    System.out.println("=========================================");
+                }
+                break;
+            }
+        }
+    }
+
+
     public static void listAllPersons(String type)
     {
         switch (type)
@@ -295,36 +339,7 @@ public class Group2MainClass {
             }
         }
     }
-    public static void listAllPersons(String type)
-    {
-        switch (type)
-        {
-            case "owner":
-            {
-                for (Owner owner:owners.values())
-                {
-                    owner.print();
-                }
-                break;
-            }
-            case "customers":
-            {
-                for (Customer customer:customers.values())
-                {
-                    customer.print();
-                }
-                break;
-            }
-            case "drivers":
-            {
-                for (Driver driver:drivers.values())
-                {
-                    driver.print();
-                }
-                break;
-            }
-        }
-    }
+
     public static void listOwnerAllVehicals()
     {
         for (Owner owner:owners.values())
@@ -411,6 +426,44 @@ public class Group2MainClass {
                 }
 
                 break;
+            }
+            case 2:
+            {
+                int nextChoice=0;
+
+                System.out.println("1.Cars");
+                System.out.println("2.Buses");
+                System.out.println("3.MotorCycle");
+                System.out.println("Enter your choice:- ");
+                nextChoice=input.nextInt();
+
+                switch (nextChoice)
+                {
+                    case 1:
+                    {
+                        listAllVehicle("car");
+                        break;
+                    }
+                    case 2:
+                    {
+                        listAllVehicals("bus");
+                        break;
+                    }
+                    case 3:
+                    {
+                        listAllVehicals("motorcycle");
+                        break;
+                    }
+                }
+            }
+            case 3:
+            {
+                listOwnerAllVehicals();
+                break;
+            }
+        }
+
+    }
 
 }
 
