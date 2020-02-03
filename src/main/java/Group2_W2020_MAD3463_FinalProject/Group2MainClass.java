@@ -2,88 +2,52 @@ package Group2_W2020_MAD3463_FinalProject;
 
 
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Scanner;
 
+
+
+
 public class Group2MainClass {
-    public static void main(String[] args) {
-        System.out.println("Enter Your Choice:--");
-        try {
-            Scanner input = new Scanner(System.in);
-            int choice = 0;
-            do {
-                System.out.println("=========================");
-                System.out.println("--------CREATE-----------");
-                System.out.println("1.Person");
-                System.out.println("2.Vehicle");
-                System.out.println("-------------------------");
-                System.out.println("0.Exit");
-                System.out.println("==========================");
+    public static void readOwnersToHashMap()
+    {
+        String line="";
+        try{
+            File file = new File(".\\InputFiles\\Owners.csv");
+            FileReader reader = new FileReader(file);
+            BufferedReader bufferedReader=new BufferedReader(reader);
+            while ((line=bufferedReader.readLine())!=null)
+            {
+                String content[]=line.split(",");
+                LocalDate tempDate = LocalDate.parse(content[4],dateFormate);
 
-                choice=input.nextInt();
-                switch (choice)
+                for (int j=0;j<content.length;j++)
                 {
-                    case 1:
-                    {
-                        int nextChoice=0;
-                        System.out.println("ENter your choice : -");
+                    /*System.out.println(content[j]);*/
+                    Gender tempFuel;
+                    if (content[3]=="Male")
+                        tempFuel=Gender.male;
+                    else if (content[3]=="Female")
+                        tempFuel=Gender.female;
+                    else
+                        tempFuel=Gender.other;
 
-                        do{
-                            System.out.println("++++++++++++++++");
-                            System.out.println("1.Customer");
-                            System.out.println("2.Owner");
-                            System.out.println("3.Driver");
-                            System.out.println("0.Priveous menu");
-                            System.out.println("+++++++++++++++++");
-                            System.out.println(" ");
+                    Owner temp= new Owner(content[0],content[1],content[2],tempFuel,tempDate,content[5],content[6],content[7],content[8],content[9],content[10],content[11]);
 
-                            nextChoice=input.nextInt();
-
-                            switch (choice)
-                            {
-
-                                case 1:
-                                {
-
-                                }
-                                case 2:
-                                {
-
-                                }
-                                case 3:
-                                {
-
-                                }
-                                case 0:
-                                {
-                                    break;
-                                }
-                            }
-                        }
-                        while (nextChoice!=0);
-
-                        Customer Shree = new Customer(1,"shree","Marella",Gender.Male, LocalDate.of(1996,10,15),"8199210696","mvsrikanth96@gmail.com","ShreeMarella","123456","7 Crescent 2906","7 Crescent place","Toronto","Ontario");
-                        Shree.print();
-                    }
-
-                    case 0:
-                    {
-                        input.close();
-                        break;
-                    }
+                    owners.put(content[0],temp);
                 }
             }
-
-            while (choice!=0);
         }
-        catch (Exception e){
-            System.out.println(e.toString());
+        catch (Exception e)
+        {
+            System.out.println(e);
         }
     }
+
 }
-
-
-
 
 
