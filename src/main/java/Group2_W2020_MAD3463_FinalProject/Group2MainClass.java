@@ -83,9 +83,9 @@ public class Group2MainClass {
                 for(int j=0;j<content.length;j++)
                 {
                     Gender tempFuel;
-                    if (Content[3] == "Male")
+                    if (content[3] == "Male")
                         tempFuel = Gender.Male;
-                    else if (Content[3] == "Female")
+                    else if (content[3] == "Female")
                         tempFuel = Gender.Female;
                     else
                         tempFuel = Gender.other;
@@ -102,10 +102,86 @@ public class Group2MainClass {
         }
     }
 
+    public static void readCarsToHashMap()
+    {
+        String line="";
+        try{
+            File file=new File("Cars.csv");
+            FileReader reader=new FileReader(file);
+            BufferedReader bufferReader=new BufferedReader(reader);
+            while
+            ((line=bufferReader.readLine())!=null)
+            {
+                String content[]=line.split(",");
+                Driver tempDriver = null;
+
+                for (int j=0;j<content.length;j++)
+                {
+                    Fuel tempFuel = null;
+
+                    if (content[8].equalsIgnoreCase("Petrol")
+                    tempFuel=Fuel.Petrol;
+                    else if (content[8].equalsIgnoreCase("Diesel")
+                    tempFuel=Fuel.Diesel;
+                    if (content[3].equalsIgnoreCase("false")) {
+                        tempDriver = drivers.get(content[4]);
+                    }
+                    Car tempObj = new Car(content[0],content[1],content[2],Boolean.parseBoolean(content[3]),tempDriver,Boolean.parseBoolean(content[5]),content[6],Byte.parseByte(content[7]),tempFuel,Integer.parseInt(content[9]),Integer.parseInt(content[10]),content[11],content[12]);
+                    cars.put(content[0],tempObj);
+                }
+                }
+                }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
+
+    }
+
+    public static void readOwnerVehicles()
+    {
+        String line="";
+        try{
+            File file=new File("OwnerVehicles");
+            FileReader reader = new FileReader(file);
+            BufferedReader bufferedReader=new BufferedReader(reader);
+            while ((line=bufferedReader.readLine())!=null)
+            {
+                HashMap<String, Vehicle> tempOwnerVehicles = new HashMap<>();
+                String content[]=line.split(",");
+                Owner tempOwner=owners.get(content[0]);
+                Vehicle tempVehicle=null;
+                for (int j=1;j<content.length;j++)
+                {
+                    if (cars.get(content[j])!=null)
+                    {
+                        tempVehicle=cars.get(content[j]);
+                    }
+                    else if(busses.get(content[j])!=null)
+                    {
+                        tempVehicle=busses.get(content[j]);
+                    }
+                    else if(motorcycles.get(content[j])!=null)
+                    {
+                        tempVehicle=motorcycles.get(content[j]);
+                    }
+                    tempOwnerVehicles.put(tempVehicle.getVehicleIdentificationNumber(),tempVehicle);
+                }
+                tempOwner.setListOfVehcialOwned(tempOwnerVehicles);
+            }
+            bufferedReader.close();
+        }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
+
+            }
 
 
+        }
+    }
 
-}
 
 
 
