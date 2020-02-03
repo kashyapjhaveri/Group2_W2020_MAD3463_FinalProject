@@ -264,8 +264,36 @@ public class Group2MainClass {
         }
     }
 
-
-
+    public static void listAllPersons(String type)
+    {
+        switch (type)
+        {
+            case "owner":
+            {
+                for (Owner owner:owners.values())
+                {
+                    owner.print();
+                }
+                break;
+            }
+            case "customers":
+            {
+                for (Customer customer:customers.values())
+                {
+                    customer.print();
+                }
+                break;
+            }
+            case "drivers":
+            {
+                for (Driver driver:drivers.values())
+                {
+                    driver.print();
+                }
+                break;
+            }
+        }
+    }
     public static void listAllPersons(String type)
     {
         switch (type)
