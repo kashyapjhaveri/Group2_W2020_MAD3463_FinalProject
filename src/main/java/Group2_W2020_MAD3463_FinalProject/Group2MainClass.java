@@ -36,7 +36,7 @@ public class Group2MainClass {
             File file = new File(".customers.csv");
             FileReader reader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(reader);
-            while ((line = BufferedReader.readLine()) != null) {
+            while ((line = bufferedReader.readLine()) != null) {
                 String Content[] = line.split(",");
                 LocalDate tempDate = LocalDate.parse(Content[4], dateFormat);
 
