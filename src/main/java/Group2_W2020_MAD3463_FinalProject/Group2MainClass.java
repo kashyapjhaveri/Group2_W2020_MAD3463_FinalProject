@@ -136,7 +136,7 @@ public class Group2MainClass {
                     if (content[3].equalsIgnoreCase("false")) {
                         tempDriver = drivers.get(content[4]);
                     }
-                    Car tempObj = new Car(content[0],content[1],content[2],Boolean.parseBoolean(content[3]),tempDriver,Boolean.parseBoolean(content[5]),content[6],Byte.parseByte(content[7]),tempFuel,Integer.parseInt(content[9]),Integer.parseInt(content[10]),content[11],content[12]);
+                    Car tempObj = new Car(,content[2],Boolean.parseBoolean(content[3]),tempDriver,Boolean.parseBoolean(content[5]),content[6],Byte.parseByte(content[7]),tempFuel,Integer.parseInt(content[9]),Integer.parseInt(content[10]),content[11],content[12]);
                     cars.put(content[0],tempObj);
                 }
                 }
