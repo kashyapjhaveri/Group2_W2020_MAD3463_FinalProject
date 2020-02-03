@@ -11,24 +11,23 @@ import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 
 public class Group2MainClass {
-    public static HashMap<String,Customer> customers=new HashMap<>();
-    public static HashMap<String,Owner>owners = new HashMap<>();
-    public static HashMap<String,Driver>drivers=new HashMap<>();
-    public static HashMap<String,Bus>busses=new HashMap<>();
-    public static HashMap<String, Car>cars=new HashMap<>();
-    public static HashMap<String, MotorCycle>motorcycles=new HashMap<>();
+    public static HashMap<String, Customer> customers = new HashMap<>();
+    public static HashMap<String, Owner> owners = new HashMap<>();
+    public static HashMap<String, Driver> drivers = new HashMap<>();
+    public static HashMap<String, Bus> busses = new HashMap<>();
+    public static HashMap<String, Car> cars = new HashMap<>();
+    public static HashMap<String, MotorCycle> motorcycles = new HashMap<>();
 
-    public static DateTimeFormatter dateFormat=DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    public static DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     public static void readCustomersToHashmap() //https://mkyong.com/java/how-to-read-and-parse-csv-file-in-java/
     {
-        String line="";
+        String line = "";
         try {
             File file = new File(".customers.csv");
             FileReader reader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(reader);
-            while ((line = BufferedReader.readLine()) != null)
-            {
+            while ((line = BufferedReader.readLine()) != null) {
                 String Content[] = line.split(",");
                 LocalDate tempDate = LocalDate.parse(Content[4], dateFormat);
 
@@ -44,18 +43,40 @@ public class Group2MainClass {
                     customers.put(Content[0], temp);
                 }
             }
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             System.out.println(e);
         }
 
     }
 
-    public static void readOwnersToHashmap()
-    {
-        
+    public static void readOwnersToHashmap() {
+        String line = "";
+        try {
+            File file = new File(".\\InputFiles\\Owners.csv");
+            FileReader reader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(reader);
+            while ((line = bufferedReader.readLine()) != null) {
+                String content[] = line.split(",");
+                LocalDate tempDate = LocalDate.parse(content[4], dateFormat);
+                for (int j = 0; j < content.length; j++) {
+                    Gender tempFuel;
+                    if (content[3] == "Male")
+                        tempFuel = Gender.male;
+                    else if (content[3] == "Female")
+                        tempFuel = Gender.female;
+                    else
+                        tempFuel = Gender.other;
+                    Owner temp = new Owner(content[0], content[1], content[2], tempFuel, tempDate, content[5], content[6], content[7], content[8], content[9], content[10], content[11]);
+                    owners.put(content[0], temp);
+                }
+            }
+        } catch (Exception e)
+        {
+            System.out.println(e);
+        }
     }
+
+
     public static void readDriversToHashMap()
     {
         String line="";
