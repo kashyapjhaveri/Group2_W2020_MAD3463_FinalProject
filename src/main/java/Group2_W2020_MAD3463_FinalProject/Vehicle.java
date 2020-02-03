@@ -13,11 +13,12 @@ abstract public class Vehicle implements IDisplay
     private Fuel fuelType;
     private Integer baseRate;
     private Integer ratePerKm;
+    private String vehicleType;
 
     public Vehicle() {
     }
 
-    public Vehicle(String vehicleIdentificationNumber, String vehicleDescription, String manufacturerName, boolean isSelfDrive, Driver driver, boolean isInsured, String insuranceProviderName, Byte noOfSeat, Fuel fuelType, Integer baseRate, Integer ratePerKm) {
+    public Vehicle(String vehicleIdentificationNumber, String vehicleDescription, String manufacturerName, boolean isSelfDrive, Driver driver, boolean isInsured, String insuranceProviderName, Byte noOfSeat, Fuel fuelType, Integer baseRate, Integer ratePerKm,String vehicleType) {
         this.vehicleIdentificationNumber = vehicleIdentificationNumber;
         this.vehicleDescription = vehicleDescription;
         this.manufacturerName = manufacturerName;
@@ -29,6 +30,7 @@ abstract public class Vehicle implements IDisplay
         this.fuelType = fuelType;
         this.baseRate = baseRate;
         this.ratePerKm = ratePerKm;
+        this.vehicleType=vehicleType;
     }
 
     public String getVehicleIdentificationNumber() {
@@ -117,5 +119,13 @@ abstract public class Vehicle implements IDisplay
 
     public void setRatePerKm(Integer ratePerKm) {
         this.ratePerKm = ratePerKm;
+    }
+
+    public String getVehicleType() {
+        return vehicleType;
+    }
+
+    public void setVehicleType(String vehicleType) {
+        this.vehicleType = vehicleType;
     }
 }

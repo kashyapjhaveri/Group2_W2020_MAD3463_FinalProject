@@ -9,6 +9,7 @@ public class VehicleRent implements IDisplay
     private Integer noOfDays;
     private Integer noOfKmDriven;
     private Float totalBill;
+    private Vehicle vehicleRented;
     /*private vehicle vehicleRented;*/
 
 
@@ -50,6 +51,14 @@ public class VehicleRent implements IDisplay
 
     public void setTotalBill(Float totalBill) {
         this.totalBill = totalBill;
+    }
+
+    public Vehicle getVehicleRented() {
+        return vehicleRented;
+    }
+
+    public void setVehicleRented(Vehicle vehicleRented) {
+        this.vehicleRented = vehicleRented;
     }
 
     @Override
