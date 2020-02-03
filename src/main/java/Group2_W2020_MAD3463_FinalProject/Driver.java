@@ -45,7 +45,8 @@ public class Driver extends Person
     @Override
     public void print()
     {
+        System.out.println("+++++++++++++++");
         System.out.println(getId()+""+getFirstName()+""+getLastName()+""+getBirthDate()+""+getMobileNumber()+""+getEmail()+""+getUserName()+""+getPassword()+""+getDrivingLicenceNumber()+""+getIsHistoryCleared()+""+getSalary());
-
+        System.out.println("+++++++++++++++");
     }
 }
