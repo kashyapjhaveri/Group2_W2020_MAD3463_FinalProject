@@ -42,7 +42,7 @@ public class Bus extends Vehicle
     @Override
     public void print()
     {
-        /*System.out.println(getVehicalIndentificationNumber()+" "+getVechicalDiscription()+" "+getManufacturerName()+" "+getSelfDrive()+" "+getInsured()+" "+getInsuranceProviderName()+" "+getNoOfSeat()+" "+getFuelType()+" "+getBaseRate()+" "+getRatePerKm()+" "+getTypeOfBus()+" "+getAccessibilityAvailable()+" "+getWifiAvailable());*/
+        System.out.println(getVehicleIdentificationNumber()+" "+getVehicleDescription()+" "+getManufacturerName()+" "+getSelfDrive()+" "+getInsured()+" "+getInsuranceProviderName()+" "+getNoOfSeat()+" "+getFuelType()+" "+getBaseRate()+" "+getRatePerKm()+" "+getTypeOfBus()+" "+getAccessibilityAvailable()+" "+getWifiAvailable());
         System.out.println("VIn:- "+getVehicleIdentificationNumber());
         System.out.println("Description:- "+getVehicleDescription());
         System.out.println("Manufacturer:- "+getManufacturerName());
