@@ -51,7 +51,7 @@ public class Owner extends Person {
 
     public void print()
     {
-        System.out.println(getId()+" "+getFirstName()+" "+getLastName()+" "+getBirthDate()+" "+getMobileNumber()+" "+getEmail()+" "+getUserName()+" "+getPassword()+" "+getCompanyTitle()+" "+getBusinessNumber()+" "+getWebsite());
+        /*System.out.println(getId()+" "+getFirstName()+" "+getLastName()+" "+getBirthDate()+" "+getMobileNumber()+" "+getEmail()+" "+getUserName()+" "+getPassword()+" "+getCompanyTitle()+" "+getBusinessNumber()+" "+getWebsite());*/
 
     }
 }
