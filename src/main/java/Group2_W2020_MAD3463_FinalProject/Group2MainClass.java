@@ -1,30 +1,14 @@
 package Group2_W2020_MAD3463_FinalProject;
 
-import Group2_W2020_MAD3463_FinalProject.Fuel;
-import Group2_W2020_MAD3463_FinalProject.Gender;
-import Group2_W2020_MAD3463_FinalProject.Customer;
-import Group2_W2020_MAD3463_FinalProject.Driver;
-import Group2_W2020_MAD3463_FinalProject.Owner;
-import Group2_W2020_MAD3463_FinalProject.Bus;
-import Group2_W2020_MAD3463_FinalProject.Car;
-import Group2_W2020_MAD3463_FinalProject.MotorCycle;
-import Group2_W2020_MAD3463_FinalProject.Vehicle;
-import com.sun.tools.doclets.internal.toolkit.Content;
-import com.sun.tools.javah.Gen;
-import jdk.nashorn.internal.runtime.ConsString;
+import Group2_W2020_MAD3463_FinalProject.Enum.Fuel;
+import Group2_W2020_MAD3463_FinalProject.Enum.Gender;
 
-import javax.swing.text.AbstractDocument;
-import javax.swing.text.StringContent;
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.nio.Buffer;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Scanner;
 
 public class Group2MainClass {
     public static HashMap<String,Customer> customers=new HashMap<>();
@@ -66,6 +50,11 @@ public class Group2MainClass {
             System.out.println(e);
         }
 
+    }
+
+    public static void readOwnersToHashmap()
+    {
+        
     }
     public static void readDriversToHashMap()
     {
@@ -210,6 +199,7 @@ public class Group2MainClass {
             }
         }
     }
+
 }
 
 

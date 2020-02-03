@@ -1,0 +1,28 @@
+
+V
+squid:S106*"9Replace this use of System.out or System.err by a logger.(Ÿº©Ø8­ğÏÉ€.
+[
+squid:S106$"9Replace this use of System.out or System.err by a logger.(£ÛÍĞıÿÿÿÿ8­ğÏÉ€.
+[
+squid:S106'"9Replace this use of System.out or System.err by a logger.(£’¾›ûÿÿÿÿ8­ğÏÉ€.
+V
+squid:S106("9Replace this use of System.out or System.err by a logger.(ù±ø­8­ğÏÉ€.
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ü™üÑıÿÿÿÿ
+V
+squid:S106+"9Replace this use of System.out or System.err by a logger.(´£Â8­ğÏÉ€.
+V
+squid:S106)"9Replace this use of System.out or System.err by a logger.(“Ë¼à8­ğÏÉ€.
+V
+squid:S106""9Replace this use of System.out or System.err by a logger.(÷ú¦Ï8œ™ĞÉ€.
+[
+squid:S106%"9Replace this use of System.out or System.err by a logger.(¢ˆñ©øÿÿÿÿ8­ğÏÉ€.
+U
+squid:S106#"9Replace this use of System.out or System.err by a logger.(“ùó`8­ğÏÉ€.
+asquid:S00107"BConstructor has 14 parameters, which is greater than 7 authorized.(ÒÒèø8•‚ŠÉ€.
+[
+squid:S106-"9Replace this use of System.out or System.err by a logger.(¥ôÇøşÿÿÿÿ8­ğÏÉ€.
+[
+squid:S106,"9Replace this use of System.out or System.err by a logger.(”ó´¢øÿÿÿÿ8­ğÏÉ€.
+isquid:CommentedOutCodeLine!"<This block of commented-out lines of code should be removed.(¾å¶8ØŞ‘É€.
+[
+squid:S106&"9Replace this use of System.out or System.err by a logger.(Œëâƒÿÿÿÿÿ8­ğÏÉ€.

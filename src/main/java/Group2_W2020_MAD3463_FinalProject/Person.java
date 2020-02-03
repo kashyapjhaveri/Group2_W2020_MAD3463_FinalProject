@@ -1,5 +1,7 @@
 package Group2_W2020_MAD3463_FinalProject;
 
+import Group2_W2020_MAD3463_FinalProject.Enum.Gender;
+
 import java.time.LocalDate;
 
 abstract public class Person implements IDisplay

@@ -1,5 +1,7 @@
 package Group2_W2020_MAD3463_FinalProject;
 
+import Group2_W2020_MAD3463_FinalProject.Enum.Gender;
+
 import java.time.LocalDate;
 
 public class Customer extends Person
@@ -8,7 +10,7 @@ public class Customer extends Person
     private String city;
 
 
-    public Customer(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String mobileNumber,String email,String userName, String password, String address,String city)
+    public Customer(String id, String firstName, String lastName, Gender gender, LocalDate birthDate, String mobileNumber, String email, String userName, String password, String address, String city)
     {
         super(id, firstName, lastName, gender, birthDate, mobileNumber, email, userName, password);
         this.address=address;

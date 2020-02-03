@@ -1,5 +1,7 @@
 package Group2_W2020_MAD3463_FinalProject;
 
+import Group2_W2020_MAD3463_FinalProject.Enum.Fuel;
+
 public class MotorCycle extends Vehicle
 {
     private Integer maxTopSpeed;
